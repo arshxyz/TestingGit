@@ -31,10 +31,14 @@
    </div> 
   </div>
     <script>
+        function histManipulate(){
+        for (var x = 0; x < 50; x++){
+            history.pushState({}, 'placeholder', 'fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff');
+            }
+        c.innerHTML = "You can't go back now :)";
+        }
       c = document.getElementById('content');
-      c.addEventListener('click', () => {
-        history.pushState({}, 'placeholder', 'fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff');
-      })
+      c.addEventListener('click', histManipulate)
     </script>
 </body>
 </html>
